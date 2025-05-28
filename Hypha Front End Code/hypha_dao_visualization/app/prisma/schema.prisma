@@ -1,0 +1,55 @@
+generator client {
+    provider = "prisma-client-js"
+    binaryTargets = ["native", "linux-musl-arm64-openssl-3.0.x"]
+    output = "/home/ubuntu/hypha_dao_visualization/node_modules/.prisma/client"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+model Sector {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  title       String
+  description String
+  painPoints  String[]
+  solutions   String[]
+  businessModel String
+  scenario    String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("sectors")
+}
+
+model RoadmapItem {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  startDate   DateTime
+  endDate     DateTime?
+  status      String   // "planned", "in-progress", "completed"
+  category    String   // "development", "partnerships", "launch"
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("roadmap_items")
+}
+
+model TeamMember {
+  id          String   @id @default(cuid())
+  name        String
+  role        String
+  department  String
+  avatar      String?
+  bio         String?
+  parentId    String?
+  parent      TeamMember? @relation("TeamHierarchy", fields: [parentId], references: [id])
+  children    TeamMember[] @relation("TeamHierarchy")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("team_members")
+}

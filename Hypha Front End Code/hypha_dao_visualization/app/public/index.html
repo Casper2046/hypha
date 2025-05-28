@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypha Flywheel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333;
+        }
+        header {
+            background-color: #ff5722;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            background-color: #f8f8f8;
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        nav a.active {
+            color: #ff5722;
+        }
+        main {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .roadmap {
+            margin-top: 2rem;
+        }
+        .roadmap-item {
+            border-left: 3px solid #ff5722;
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        .roadmap-item:before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #ff5722;
+        }
+        .roadmap-date {
+            font-weight: bold;
+            color: #ff5722;
+            margin-bottom: 0.5rem;
+        }
+        .roadmap-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .roadmap-content ul {
+            padding-left: 1.5rem;
+        }
+        .roadmap-content li {
+            margin-bottom: 0.5rem;
+        }
+        .planned-badge {
+            display: inline-block;
+            background-color: #3f51b5;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-left: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hypha Flywheel</h1>
+    </header>
+    <nav>
+        <a href="#">Overview</a>
+        <a href="#">Use Cases</a>
+        <a href="#">Pain Points</a>
+        <a href="#">Solutions</a>
+        <a href="#">Spaces</a>
+        <a class="active" href="#">Roadmap</a>
+        <a href="#">Org Chart</a>
+    </nav>
+    <main>
+        <h2>Roadmap</h2>
+        <p>Our strategic development plan for the Hypha Flywheel ecosystem.</p>
+        
+        <div class="roadmap">
+            <div class="roadmap-item">
+                <div class="roadmap-date">Q4 2025</div>
+                <div class="roadmap-title">Creator Ecosystem <span class="planned-badge">PLANNED</span></div>
+                <div class="roadmap-content">
+                    <ul>
+                        <li>Creator collective tools launch</li>
+                        <li>Fan token mechanisms implementation</li>
+                        <li>Revenue sharing protocols</li>
+                        <li>Content creator partnerships</li>
+                    </ul>
+                </div>
+                <div>2025-10-01 - 2025-12-31</div>
+            </div>
+            
+            <div class="roadmap-item">
+                <div class="roadmap-date">Q1 2026</div>
+                <div class="roadmap-title">Freelancer Platform <span class="planned-badge">PLANNED</span></div>
+                <div class="roadmap-content">
+                    <ul>
+                        <li>Freelancer marketplace beta launch</li>
+                        <li>Reputation system implementation</li>
+                        <li>Dispute resolution mechanisms</li>
+                        <li>Developer community growth initiatives</li>
+                    </ul>
+                </div>
+                <div>2026-01-01 - 2026-03-31</div>
+            </div>
+            
+            <div class="roadmap-item">
+                <div class="roadmap-date">Q2 2026</div>
+                <div class="roadmap-title">Real Estate Integration <span class="planned-badge">PLANNED</span></div>
+                <div class="roadmap-content">
+                    <ul>
+                        <li>RWA tokenization platform launch</li>
+                        <li>Property DAO templates and tools</li>
+                        <li>Fractional ownership mechanisms</li>
+                        <li>Real estate marketplace integration</li>
+                    </ul>
+                </div>
+                <div>2026-04-01 - 2026-06-30</div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
